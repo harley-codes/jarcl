@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "library"
+		},
+		{
+			"path": "testing"
+		},
+		{
+			"path": "build"
+		},
+		{
+			"path": "docs"
+		},
+		{
+			"path": "storybook"
+		}
+	],
+	"settings": {
+		"cSpell.words": [
+			"harleycodes",
+			"tsup"
+		]
+	}
+}
