@@ -28,15 +28,8 @@ jobs:
       - name: Build Storybook
         run: npm run build-storybook
 
-      - name: Commit changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add ../docs
-          git commit -m "Build Storybook Docs"
-        
-      - name: Push changes
-        uses: ad-m/github-push-action@v0.6.0
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          publish_dir: ../docs
