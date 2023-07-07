@@ -13,9 +13,6 @@
 			"path": "build"
 		},
 		{
-			"path": "docs"
-		},
-		{
 			"path": "storybook"
 		}
 	],
