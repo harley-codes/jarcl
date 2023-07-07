@@ -44,7 +44,7 @@ jobs:
 
     environment:
       name: github-pages
-      url: ${{ github.pages_repository }}
+      url:  https://harley-codes.github.io/jarcl
     
     steps:
       - name: Configure GitHub Pages
