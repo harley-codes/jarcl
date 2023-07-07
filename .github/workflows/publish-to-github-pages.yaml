@@ -6,10 +6,11 @@ on:
 
 jobs:
   build:
+    runs-on: ubuntu-latest
+    
     defaults:
         run:
           working-directory: storybook
-    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
@@ -34,21 +35,20 @@ jobs:
 
   deploy:
     needs: build
+    runs-on: ubuntu-latest
+
     permissions:
       contents: read
       pages: write
       id-token: write
-    runs-on: ubuntu-latest
-    environment: github-pages
+
+    environment:
+      name: github-pages
+      url: $
     
     steps:
-      # - name: Configure GitHub Pages
-      #   uses: actions/configure-pages@v3
-
-      # - name: Download docs artifact
-      #   uses: actions/download-artifact@v2
-      #   with:
-      #     name: github-pages
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v3
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
