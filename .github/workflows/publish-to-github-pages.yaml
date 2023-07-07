@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     defaults:
         run:
           working-directory: storybook
@@ -44,7 +44,7 @@ jobs:
 
     environment:
       name: github-pages
-      url: $
+      url: ${{ github.pages_repository }}
     
     steps:
       - name: Configure GitHub Pages
