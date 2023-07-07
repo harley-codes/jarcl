@@ -4,8 +4,8 @@
 	"scripts": {
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "npm run step:compile && npm run step:nojekyll",
-		"step:compile": "storybook build -o ../docs -s ./stories/assets",
-		"step:nojekyll": "touch ../docs/.nojekyll || echo.> ../docs/.nojekyll"
+		"step:compile": "storybook build -o ./build-static -s ./stories/assets",
+		"step:nojekyll": "touch ./build-static/.nojekyll || echo.> ./build-static/.nojekyll"
 	},
 	"devDependencies": {
 		"@harley-codes/jarcl": "file:../library",
