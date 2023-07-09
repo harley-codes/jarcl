@@ -1,0 +1,26 @@
+{
+	"name": "@harley-codes/jarcl",
+	"version": "0.0.2",
+	"description": "Just another react component library.",
+	"author": "Harley Torrisi <mail@harleycodes.com>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/harley-codes/jarcl.git"
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com"
+	},
+	"keywords": [
+		"react",
+		"components",
+		"component-library",
+		"typescript"
+	],
+	"homepage": "https://github.com/harley-codes/jarcl#readme",
+	"bugs": {
+		"url": "https://github.com/harley-codes/jarcl/issues"
+	},
+	"main": "index.js",
+	"types": "index.d.ts"
+}

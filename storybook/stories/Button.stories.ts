@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from "@harley-codes/jarcl"
+
+import { Button } from '@harley-codes/jarcl';
 
 const meta = {
 	title: 'Components/Button',

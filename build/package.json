@@ -1,37 +1,27 @@
 {
-	"name": "@harley-codes/jarcl",
-	"version": "0.0.33",
-	"description": "Just another react component library.",
-	"author": "Harley Torrisi <mail@harleycodes.com>",
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/harley-codes/jarcl.git"
-	},
-	"publishConfig": {
-		"registry": "https://npm.pkg.github.com"
-	},
-	"keywords": [
-		"react",
-		"components",
-		"component-library",
-		"typescript"
-	],
-	"homepage": "https://github.com/harley-codes/jarcl#readme",
-	"bugs": {
-		"url": "https://github.com/harley-codes/jarcl/issues"
-	},
-	"main": "index.js",
-	"types": "index.d.ts",
-	"devDependencies": {
-		"@harley-codes/jarcl": "file:../library",
-		"@swc/core": "^1.3.67",
-		"@types/react": "^18.2.14",
-		"@types/react-dom": "^18.2.6",
-		"tsup": "^7.1.0",
-		"typescript": "^5.1.6"
+	"tsup": {
+		"legacyOutput": false,
+		"minify": false,
+		"entry": [
+			"../library/index.ts"
+		],
+		"outDir": "./output",
+		"dts": true,
+		"sourcemap": false,
+		"clean": true,
+		"metafile": false,
+		"platform": "neutral",
+		"tsconfig": "./tsconfig.json",
+		"treeshake": true,
+		"publicDir": "./public"
 	},
 	"scripts": {
-		"build": "tsup ../library/index.ts --dts --outDir ./"
+		"build": "tsup",
+		"publish": "tsup && cd ./output && npm publish"
+	},
+	"devDependencies": {
+		"tsup": "^7.1.0",
+		"typescript": "^5.1.6",
+		"@swc/core": "^1.3.68"
 	}
 }
